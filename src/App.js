@@ -33,18 +33,18 @@ function App() {
               },
               {
                 type: 'email',
-                message: 'you miss ...@gmail.com'
+                message: 'You email much be: example fantashy7799@gmail.com'
               },
               {
                 validator(_,value) {
                   if (value.indexOf(' ') === -1)return Promise.resolve() 
-                    else return Promise.reject('You much delete space')
+                    else return Promise.reject('Emails must not contain spaces')
                 }
               },
               {
                 validator(_,value) {
                   if (!/[!#$%^&*()]/.test(value)) return Promise.resolve()
-                    else return Promise.reject('co ky tu dac biet')
+                    else return Promise.reject('Emails cannot contain special characters')
                 }
               },
             ]}
